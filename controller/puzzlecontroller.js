@@ -23,9 +23,6 @@ function shuffleWord (word){
 
 exports.insert = async (req,res) => {
 
-    var image = req.file.originalname;
-    req.body.p_image = image;
-
     var total_random_char  = 16-req.body.puzzle_name.length;
     var random_char = makeid(total_random_char);
     random_char = random_char+req.body.puzzle_name;
